@@ -26,4 +26,43 @@ input[name=answer]{
     width: 100px;
     height: 100px;
     background: url(../img/key.png) center center no-repeat;
-    }
+}
+
+.submit_btnarea {
+    width: 360px;
+    margin: 0 auto;
+}
+
+.form_btn{
+    background: #005183;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .5s ease-out;
+    position: relative;
+}
+ 
+.form_btn:hover{
+    border: 1px solid #005183;
+    background: #fff;
+    color: #005183;
+}
+
+button[type="submit"][disabled] {
+    background-color: #fff;
+    color: #ccc;
+    border-color: #ccc;
+    cursor: default;
+}
+     
+button[type="submit"][disabled]:hover{
+    opacity:1;
+}
+
+.submit_btn{
+    width: 40%;
+    margin: 50px auto 0;
+}
