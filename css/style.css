@@ -1,0 +1,29 @@
+body{
+    width: 100%;
+    background-color: #dcdcdc;
+}
+
+.main{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1,h3,.text{
+    text-align: center;
+}
+
+.text input{
+    width: 100px;
+    height: 100px;
+    font-size: 5em;
+    text-align: center;
+    color: #ff0000;
+}
+
+input[name=answer]{
+    border: 0px;
+    width: 100px;
+    height: 100px;
+    background: url(../img/key.png) center center no-repeat;
+    }
