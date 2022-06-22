@@ -26,6 +26,8 @@ input[name=answer]{
     width: 100px;
     height: 100px;
     background: url(../img/key.png) center center no-repeat;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
 .submit_btnarea {

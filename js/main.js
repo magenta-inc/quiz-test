@@ -55,15 +55,62 @@
 // }
 // }
 
-$(function() {
-    $(function() {
-        $('#submit').attr('disabled', 'disabled');
-            $('#answer').click(function() {
-            if ( $(this).prop('value') == false ) {
-                $('#submit').attr('disabled', 'disabled');
-            } else {
-                $('#submit').removeAttr('disabled');
-            }
-        });
-    });
-});
+// $(function() {
+//     $(function() {
+//         $('#submit').attr('disabled', 'disabled');
+//             $('#answer').click(function() {
+//             if ( $(this).prop('value') == false ) {
+//                 $('#submit').attr('disabled', 'disabled');
+//             } else {
+//                 $('#submit').removeAttr('disabled');
+//             }
+//         });
+//     });
+// });
+
+
+window.onload = function(){
+    // テキストボックスのDOMを取得
+    const username = document.getElementById("answer");
+    // 活性/非活性を切り替えるボタンのDOMを取得
+    const button = document.getElementById("submit");
+    // 入力テキストのキーアップイベント
+    username.addEventListener('keyup', function() {
+      // テキストボックスに入力された値を取得
+      const text = username.value;
+      console.log(text);
+      // テキストが入力されている場合
+      if(text) {
+        // ボタンのdisabled属性を取り除く
+        button.disabled = null;
+      } else {
+        // ボタンにdisabledを設定する
+        button.disabled = "disabled";
+      }
+    })
+  }
+
+function isString(value) {
+    if (typeof value === "string" || value instanceof String) {
+      return true;
+    } else {
+      return false;
+    }
+}
+
+$(document).ready(function () {
+    $("#Button1").click(function () {
+      var inputText = $(".textBox").map(function (index, el) {
+        return $(this).val();
+      });
+
+      showtext = "";
+      for (i = 0; i < inputText.length; i++) {
+        showtext += inputText[i] + "<br/>";
+      }
+      $("#output").html(showtext);
+
+    })
+})
+
+
